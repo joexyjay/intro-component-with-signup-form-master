@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkblue: hsl(248, 32%, 49%);
+    --gblue: hsl(246, 25%, 77%);
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+body{
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    background-image: url(images/bg-intro-mobile.png);
+    background-color: var(--red);
+    color: white;
+    width: 375px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+    
+}
+main{
+    padding: 3rem;
+}
+.cta button{
+    border: none;
+    font-family: 'Overpass', sans-serif;
+    padding: 20px 50px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    box-shadow: 1px 5px 10px grey;
+    cursor: pointer;
+}
+.cta button span{
+    font-weight: bold;
+}
+.form-content{
+    background-color: white;
+    color: black;
+    width: min-content;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px grey;    
+}
+.form-content input{
+    padding: 15px;
+    border-radius: 5px;
+    border-style: solid;
+    font-family: 'Overpass', sans-serif;
+    width: 220px;
+    font-weight: bold;
+    opacity: 0.5;   
+}
+.form-content button{
+    background-color: var(--green);
+    color: white;
+    border: none;
+    opacity: 1;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+input + small {
+    opacity: 0;
+    height: 0;
+}
+input.error +small{
+    opacity: 1;
+    margin-bottom: 20px;
+    height: 20px;
+    
+}
+small + img{
+    opacity: 0;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+}
+input.error +small + img{
+    opacity: 1;
+    
+}
+.error{
+    border-color: red;
+}
+.form-content p{
+    font-size: 11px;
+    opacity: 0.5;
+}
+.form-content p span{
+    color: var(--red);
+    font-weight: bold;
+    cursor: pointer;
+}
+small{
+    display: block;
+    color: red;
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+}
+.form-control{
+    position: relative;
+}
+
+
+@media (min-width: 800px) {
+    body{
+        width: auto;   
+    }
+    main{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .hero h1{
+        font-size: 50px;
+        line-height: 1.2;
+    }
+    .hero{
+        width: 30%;
+        align-self: center;
+        text-align: left;
+    }
+    .form-content{
+        width: auto;
+        margin-bottom: 30px;
+    }
+    .form-content input{
+        width: 500px;
+        padding: 25px;
+    }
+    .form-content button{
+        width: 93%;
+        padding: 25px;
+    }
+    .cta button{
+        width: 600px;
+       
+    }
+    small + img{
+        opacity: 0;
+        position: absolute;
+        top: 25px;
+        right: 40px;
+    }
+    
+    
+}
+
+
